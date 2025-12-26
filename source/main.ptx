@@ -6,7 +6,7 @@
 
   <book xml:id="calculus-of-variations">
     <title>Calculus of Variations</title>
-    <subtitle>An example to get you started</subtitle>
+    <!-- <subtitle>An example to get you started</subtitle> -->
 
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />
