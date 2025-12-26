@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<chapter xml:id="brachistochrone" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+
+<title>The brachistochrone problem</title>
+
+  <xi:include href="./sec-brachistochrone-overview.ptx" />
+  <xi:include href="./sec-analytic-formulation.ptx" />
+  <xi:include href="./sec-first-necessary-3.ptx" />
+  <xi:include href="./sec-application-brachistochrone.ptx" />
+  <xi:include href="./sec-cycloids.ptx" />
+</chapter>

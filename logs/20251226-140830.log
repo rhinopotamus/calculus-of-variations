@@ -1,0 +1,15 @@
+INFO    : Since no target was supplied, we will use "web".
+
+INFO    : Building target web
+INFO    : XSL conversion of /home/spencer/github/calculus-of-variations/source/main.ptx by /home/spencer/.ptx/2.33.2/core/xsl/utilities/pretext-enhanced-source.xsl
+ERROR   : Error loading /home/spencer/github/calculus-of-variations/source/sec-brachistochrone-overview.xml: Error reading file '/home/spencer/github/calculus-of-variations/source/sec-brachistochrone-overview.xml': failed to load "/home/spencer/github/calculus-of-variations/source/sec-brachistochrone-overview.xml": No such file or directory
+ERROR   : Error assembling source file: Error reading file '/home/spencer/github/calculus-of-variations/source/sec-brachistochrone-overview.xml': failed to load "/home/spencer/github/calculus-of-variations/source/sec-brachistochrone-overview.xml": No such file or directory
+CRITICAL: XML syntax for source file is invalid
+INFO    : ------------------------
+CRITICAL: Failed to build without errors.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

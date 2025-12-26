@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The analytic formulation of the problem</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Calculus of Variations">
+<meta property="book:author" content="You">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.5';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.42217a82c75796c8.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.7e141ad8414abf4a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f4ab138da65f4203.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="calculus of variations" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="calculus-of-variations.html"><span class="title">Calculus of Variations</span> <span class="subtitle">An example to get you started</span></a></h1>
+<p class="byline">You</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-brachistochrone-overview.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="brachistochrone.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-first-necessary-3.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="typical.html" class="internal"><span class="codenumber">1</span> <span class="title">Typical Problems of the Calculus of Variations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-invention-of-calculus.html" class="internal"><span class="codenumber">1.1</span> <span class="title">The invention of the calculus</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-maxima-and-minima.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Maxima and minima</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-two-problems.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Two problems of the calculus of variations which may be simply formulated</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-problem-newton.html" class="internal"><span class="codenumber">1.4</span> <span class="title">The problem of Newton</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-brachistochrone.html" class="internal"><span class="codenumber">1.5</span> <span class="title">The brachistochrone problem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-more-general.html" class="internal"><span class="codenumber">1.6</span> <span class="title">A more general problem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-other-problems.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Other problems of the calculus of variations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="shortest.html" class="internal"><span class="codenumber">2</span> <span class="title">Shortest Distances</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-shortest-arc.html" class="internal"><span class="codenumber">2.1</span> <span class="title">The shortest arc joining two points</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-first-necessary.html" class="internal"><span class="codenumber">2.2</span> <span class="title">A first necessary condition</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-fundamental-lemma.html" class="internal"><span class="codenumber">2.3</span> <span class="title">A fundamental lemma</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-straight-line.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Proof that the straight line is shortest</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-auxiliary-formulas.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Two important auxiliary formulas</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-field.html" class="internal"><span class="codenumber">2.6</span> <span class="title">The notion of a field and a second sufficiency proof</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-shortest-curve.html" class="internal"><span class="codenumber">2.7</span> <span class="title">The shortest arc joining a point to a curve</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-shortest-ellipse.html" class="internal"><span class="codenumber">2.8</span> <span class="title">The shortest arc joining a point to an ellipse</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-two-curves.html" class="internal"><span class="codenumber">2.9</span> <span class="title">The shortest arc joining two curves</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="brachistochrone.html" class="internal"><span class="codenumber">3</span> <span class="title">The brachistochrone problem</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-brachistochrone-overview.html" class="internal"><span class="codenumber">3.1</span> <span class="title">The brachistochrone problem: its significance as an illustration</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-analytic-formulation.html" class="internal"><span class="codenumber">3.2</span> <span class="title">The analytic formulation of the problem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-first-necessary-3.html" class="internal"><span class="codenumber">3.3</span> <span class="title">A first necessary condition</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-application-brachistochrone.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Application to the brachistochrone problem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cycloids.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Cycloids</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="surfaces.html" class="internal"><span class="codenumber">4</span> <span class="title">Surfaces of revolution of minimum area</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-preliminary-remarks.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Preliminary remarks concerning the problem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-proof-catenary.html" class="internal"><span class="codenumber">4.2</span> <span class="title">The proof that the minimizing arc is a catenary</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-family-catenaries.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The one-parameter family of catenaries through a point</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-analytic-formulation"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The analytic formulation of the problem</span>
+</h2>
+<div class="para" id="sec-analytic-formulation-2">In order to discuss intelligently the problem of the brachistochrone we should first deduce for ourselves the integral which represents the time required by a particle to fall under the action of gravity down an arbitrarily chosen curve joining two fixed points 1 and 2. It is agreed that the initial velocity <span class="process-math">\(v_1\)</span> at the point 1 is given in advance, and that the particle is to fall without friction on the curve and without resistance in the surrounding medium. If the effects of friction or a resisting medium are to be taken into account the brachistochrone problem becomes a much more complicated one.<div class="autopermalink" data-description="Paragraph"><a href="#sec-analytic-formulation-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="sec-analytic-formulation-3"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="sec-analytic-formulation-3-1">
+<div class="para">I’m hiding the diagram included in the textbook under a little foldy thing. I encourage you to draw your own diagram first, based on the instructions in the next paragraph, and <em class="emphasis">then</em> compare your diagram to the one in the book. (This will actually help you make sense of the book’s diagram when you see it, because there’s some things that aren’t super clear.) Label the following:</div>
+<ul class="disc" id="sec-analytic-formulation-3-1-2">
+<li id="sec-analytic-formulation-3-1-2-1">
+<div class="para" id="sec-analytic-formulation-3-1-2-1-1">the curve of descent <span class="process-math">\(C\)</span> connecting point 1 and point 2;<div class="autopermalink" data-description="Paragraph"><a href="#sec-analytic-formulation-3-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-analytic-formulation-3-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-analytic-formulation-3-1-2-2">
+<div class="para" id="sec-analytic-formulation-3-1-2-2-1">a moving particle <span class="process-math">\(P\)</span> on the curve <span class="process-math">\(C\text{;}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-analytic-formulation-3-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-analytic-formulation-3-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-analytic-formulation-3-1-2-3">
+<div class="para" id="sec-analytic-formulation-3-1-2-3-1">the distance <span class="process-math">\(s\)</span> that the point <span class="process-math">\(P\)</span> has actually traveled so far;<div class="autopermalink" data-description="Paragraph"><a href="#sec-analytic-formulation-3-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-analytic-formulation-3-1-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-analytic-formulation-3-1-2-4">
+<div class="para" id="sec-analytic-formulation-3-1-2-4-1">a tangent line to the curve <span class="process-math">\(C\)</span> at the point <span class="process-math">\(P\text{;}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-analytic-formulation-3-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-analytic-formulation-3-1-2-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-analytic-formulation-3-1-2-5">
+<div class="para" id="sec-analytic-formulation-3-1-2-5-1">the vertical and horizontal components of that tangent line;<div class="autopermalink" data-description="Paragraph"><a href="#sec-analytic-formulation-3-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-analytic-formulation-3-1-2-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-analytic-formulation-3-1-2-6">
+<div class="para" id="sec-analytic-formulation-3-1-2-6-1">the angle <span class="process-math">\(\tau\)</span> between the horizontal and the tangent line; and<div class="autopermalink" data-description="Paragraph"><a href="#sec-analytic-formulation-3-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-analytic-formulation-3-1-2-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-analytic-formulation-3-1-2-7">
+<div class="para" id="sec-analytic-formulation-3-1-2-7-1">the downward force of gravity <span class="process-math">\(mg\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-analytic-formulation-3-1-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-analytic-formulation-3-1-2-7" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-analytic-formulation-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="sec-analytic-formulation-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<figure class="figure figure-like" id="fig-12"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/fig-12.png" class="contained" alt="Diagram of a point moving along a curve under the force of gravity."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" data-description="Figure 3.2.1"><a href="#fig-12" title="Copy heading and permalink for Figure 3.2.1" aria-label="Copy heading and permalink for Figure 3.2.1">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Solution 3.2.1.1"><a href="#sec-analytic-formulation-3-2" title="Copy heading and permalink for Solution 3.2.1.1" aria-label="Copy heading and permalink for Solution 3.2.1.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Activity 3.2.1"><a href="#sec-analytic-formulation-3" title="Copy heading and permalink for Activity 3.2.1" aria-label="Copy heading and permalink for Activity 3.2.1">🔗</a></div></article><div class="para" id="sec-analytic-formulation-4">Let <span class="process-math">\(m\)</span> be the mass of the moving particle <span class="process-math">\(P\)</span> in <a href="sec-analytic-formulation.html#fig-12" class="xref" data-knowl="./knowl/xref/fig-12.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.2.1">Figure 3.2.1</a> and <span class="process-math">\(s\)</span> the distance through which it has fallen from the point 1 along the curve of descent <span class="process-math">\(C\)</span> in the time <span class="process-math">\(t\text{.}\)</span> In order to make our analysis more convenient we may take the positive <span class="process-math">\(y\)</span>-axis vertically downward, as shown in the figure. <details id="sec-analytic-formulation-4-8" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Aside</span></h3></summary><aside class="aside aside-like knowl__content"></aside></details><div class="autopermalink" data-description="Paragraph"><a href="#sec-analytic-formulation-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-analytic-formulation-5">
+<div class="para">The vertical force of gravity acting upon <span class="process-math">\(P\)</span> is the product of the mass <span class="process-math">\(m\)</span> by the gravitational acceleration <span class="process-math">\(g\text{,}\)</span> and the only force acting upon <span class="process-math">\(P\)</span> in the direction of the tangent line to the curve is the projection <span class="process-math">\(mg \sin \tau\)</span> of this vertical gravitational force upon that line. But the force along the tangent may also be computed as the product <span class="process-math">\(m \frac{d^2s}{dt^2}\)</span> of the mass of the particle by its acceleration along the curve. Equating these two values we find the equation</div>
+<div class="displaymath process-math" id="sec-analytic-formulation-5-7">
+\begin{equation*}
+\frac{d^2s}{dt^2} = g \sin \tau = g \frac{dy}{ds},
+\end{equation*}
+</div>
+<div class="para">in which a common factor <span class="process-math">\(m\)</span> has been discarded and use has been made of the well-known calculus formula <span class="process-math">\(\sin \tau = \frac{dy}{ds}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-analytic-formulation-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="sec-analytic-formulation-6"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="sec-analytic-formulation-6-1">That’s not a well-known formula to me! Draw yourself a little triangle with angle <span class="process-math">\(\tau\)</span> and sides <span class="process-math">\(\Delta s\)</span> and <span class="process-math">\(\Delta y\text{.}\)</span> Use this to conclude <span class="process-math">\(\sin \tau = \frac{dy}{ds}\)</span> in the limit.<div class="autopermalink" data-description="Paragraph"><a href="#sec-analytic-formulation-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 3.2.2"><a href="#sec-analytic-formulation-6" title="Copy heading and permalink for Activity 3.2.2" aria-label="Copy heading and permalink for Activity 3.2.2">🔗</a></div></article><div class="para" id="sec-analytic-formulation-7">To integrate this equation we follow a customary procedure and multiply each side by <span class="process-math">\(2 \frac{ds}{dt}\text{.}\)</span> The antiderivatives of the two sides are then easily found,<div class="autopermalink" data-description="Paragraph"><a href="#sec-analytic-formulation-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="sec-analytic-formulation-8"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="sec-analytic-formulation-8-1">This is honestly just rude because these antiderivatives do take a little work.<div class="autopermalink" data-description="Paragraph"><a href="#sec-analytic-formulation-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal" id="sec-analytic-formulation-8-2">
+<li id="sec-analytic-formulation-8-2-1">
+<div class="para logical" id="sec-analytic-formulation-8-2-1-1">
+<div class="para">Start by writing down the two sides of this equation:</div>
+<div class="displaymath process-math" id="sec-analytic-formulation-8-2-1-1-1">
+\begin{equation*}
+\frac{d^2s}{dt^2} = g \frac{dy}{ds}
+\end{equation*}
+</div>
+<div class="para">Multiply both sides by <span class="process-math">\(2 \frac{ds}{dt}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-analytic-formulation-8-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec-analytic-formulation-8-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec-analytic-formulation-8-2-2">
+<div class="para" id="sec-analytic-formulation-8-2-2-1">On the RHS, use the chain rule to simplify <span class="process-math">\(\frac{dy}{ds} \frac{ds}{dt}\text{.}\)</span> Then integrate with respect to <span class="process-math">\(t\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-analytic-formulation-8-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec-analytic-formulation-8-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="sec-analytic-formulation-8-2-3">
+<div class="para" id="sec-analytic-formulation-8-2-3-1">On the LHS, some more work is necessary. What does <span class="process-math">\(\frac{ds}{dt}\)</span> mean in physical terms? How about <span class="process-math">\(\frac{d^2s}{dt^2}\text{?}\)</span> Replace these two things with letters better representing their physical meaning.<div class="autopermalink" data-description="Paragraph"><a href="#sec-analytic-formulation-8-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="sec-analytic-formulation-8-2-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec-analytic-formulation-8-2-3-2-1">
+<span class="process-math">\(\frac{ds}{dt}\)</span> means velocity, and <span class="process-math">\(\frac{d^2s}{dt^2}\)</span> means acceleration.<div class="autopermalink" data-description="Paragraph"><a href="#sec-analytic-formulation-8-2-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.1"><a href="#sec-analytic-formulation-8-2-3-2" title="Copy heading and permalink for Solution 3.1" aria-label="Copy heading and permalink for Solution 3.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item 3"><a href="#sec-analytic-formulation-8-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="sec-analytic-formulation-8-2-4">
+<div class="para" id="sec-analytic-formulation-8-2-4-1">Integrate the LHS with respect to <span class="process-math">\(t\text{.}\)</span> You’ll need to do a <span class="process-math">\(u\)</span>-substitution. What’s a smart choice for <span class="process-math">\(u\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-analytic-formulation-8-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="sec-analytic-formulation-8-2-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="sec-analytic-formulation-8-2-4-2-1">
+<div class="displaymath process-math" id="sec-analytic-formulation-8-2-4-2-1-1">
+\begin{equation*}
+\int 2av\, dt.
+\end{equation*}
+</div>
+<div class="para">If I choose <span class="process-math">\(u = v\text{,}\)</span> then <span class="process-math">\(du = a\, dt\text{,}\)</span> so the integral becomes</div>
+<div class="displaymath process-math" id="sec-analytic-formulation-8-2-4-2-1-4">
+\begin{equation*}
+\int 2u\, du = u^2 = v^2 = \left(\frac{ds}{dt}\right)^2.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-analytic-formulation-8-2-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.1"><a href="#sec-analytic-formulation-8-2-4-2" title="Copy heading and permalink for Solution 4.1" aria-label="Copy heading and permalink for Solution 4.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item 4"><a href="#sec-analytic-formulation-8-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Activity 3.2.3"><a href="#sec-analytic-formulation-8" title="Copy heading and permalink for Activity 3.2.3" aria-label="Copy heading and permalink for Activity 3.2.3">🔗</a></div></article><div class="para logical" id="sec-analytic-formulation-9">
+<div class="para">and since they can differ only by a constant we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-3-1.html" id="eqn-3-1">
+\begin{equation}
+\left(\frac{ds}{dt}\right)^2 = 2gy+c.\tag{3.2.1}
+\end{equation}
+</div>
+<div class="para">The value of the constant <span class="process-math">\(c\)</span> can be determined if we remember that the values of <span class="process-math">\(y\)</span> and <span class="process-math">\(v = \frac{ds}{dt}\)</span> at the initial point 1 at the fall are <span class="process-math">\(y_1\)</span> and <span class="process-math">\(v_1\text{,}\)</span> respectively, so that for <span class="process-math">\(t=0\)</span> the last equation gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-3-1.html" id="sec-analytic-formulation-9-8">
+\begin{equation*}
+v_1^2 = 2gy_1 + c.
+\end{equation*}
+</div>
+<div class="para">With the help of the value of <span class="process-math">\(c\)</span> from this equation, and the notation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-3-1.html" id="eqn-3-2">
+\begin{equation}
+\alpha = y_1 - \frac{v_1^2}{2g},\tag{3.2.2}
+\end{equation}
+</div>
+<div class="para">equation <a href="sec-analytic-formulation.html#eqn-3-1" class="xref" data-knowl="./knowl/xref/eqn-3-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.1">(3.2.1)</a> becomes</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-3-1.html" id="eqn-3-3">
+\begin{equation}
+\left(\frac{ds}{dt}\right)^2 = 2gy-2gy_1 + v_1^2 = 2g(y-\alpha).\tag{3.2.3}
+\end{equation}
+</div>
+<div class="para">An integration now gives the following result which we have been seeking:</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-analytic-formulation-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-brachistochrone-time"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="thm-brachistochrone-time-1-1">
+<div class="para">The time <span class="process-math">\(T\)</span> required by a particle starting with the initial velocity <span class="process-math">\(v_1\)</span> to fall from a point 1 to a point 2 along a curve is given by the integrals</div>
+<div class="displaymath process-math" id="eqn-3-4">
+\begin{equation}
+T = \frac{1}{\sqrt{2g}}\int_o^l \frac{ds}{\sqrt{y-\alpha}}=\frac{1}{\sqrt{2g}} \int_{x_1}^{x_2} \sqrt{\frac{1+(y')^2}{y-\alpha}}\,dx\tag{3.2.4}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-brachistochrone-time-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.2.2"><a href="#thm-brachistochrone-time" title="Copy heading and permalink for Theorem 3.2.2" aria-label="Copy heading and permalink for Theorem 3.2.2">🔗</a></div></article><article class="remark remark-like" id="sec-analytic-formulation-11"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="sec-analytic-formulation-11-1">It’s worth pointing out that this is also a functional, because the value of this integral depends on the function (or parametrically-defined curve) you’re using to connect point 1 to point 2.<div class="autopermalink" data-description="Paragraph"><a href="#sec-analytic-formulation-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 3.2.3"><a href="#sec-analytic-formulation-11" title="Copy heading and permalink for Remark 3.2.3" aria-label="Copy heading and permalink for Remark 3.2.3">🔗</a></div></article><div class="para logical" id="sec-analytic-formulation-12">
+<div class="para">It is clear that an arc which minimizes one of the integrals <a href="sec-analytic-formulation.html#eqn-3-4" class="xref" data-knowl="./knowl/xref/eqn-3-4.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2.4">(3.2.4)</a> expressing <span class="process-math">\(T\)</span> will also minimize that integral when the factor <span class="process-math">\(\frac{1}{\sqrt{2g}}\)</span> is omitted, and vice versa. Let us therefore use the notations</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-3-4.html ./knowl/xref/fig-12.html" id="eqn-3-5">
+\begin{equation}
+I=\int_{x_{2}}^{x_{3}} f\left(y, y^{\prime}\right) dx, \quad f\left(y, y^{\prime}\right)=\sqrt{\frac{1+(y')^2}{y-\alpha}}\tag{3.2.5}
+\end{equation}
+</div>
+<div class="para">for our integral which we seek to minimize and its integrand. Since the value of the function <span class="process-math">\(f(y, y')\)</span> is infinite when <span class="process-math">\(y = \alpha\)</span> and imaginary when <span class="process-math">\(y\lt \alpha\)</span> we must confine our curves to the portion of the plane which lies below the line <span class="process-math">\(y=\alpha\)</span> in <a href="sec-analytic-formulation.html#fig-12" class="xref" data-knowl="./knowl/xref/fig-12.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.2.1">Figure 3.2.1</a>. This is not really a restriction of the problem since the equation <span class="process-math">\(v^2=\left(\frac{ds}{dt}\right)^2 = 2g(y-\alpha)\)</span> deduced above shows that a particle started on a curve with the velocity <span class="process-math">\(v_1\)</span> at the point 1 will always come to rest if it reaches the altitude <span class="process-math">\(y=\alpha\)</span> on the curve, and it can never rise above that altitude. For the present we shall restrict our curves to lie in the half-plane <span class="process-math">\(y\gt \alpha\text{.}\)</span> In a later section of this chapter we shall see what happens when curves are permitted which have points in common with the line <span class="process-math">\(y=\alpha\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-analytic-formulation-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="remark remark-like" id="sec-analytic-formulation-13"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="sec-analytic-formulation-13-1">Be careful here to remember that we’ve set up our axes such that the positive <span class="process-math">\(y\)</span>-axis points <em class="emphasis">down</em>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-analytic-formulation-13-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 3.2.4"><a href="#sec-analytic-formulation-13" title="Copy heading and permalink for Remark 3.2.4" aria-label="Copy heading and permalink for Remark 3.2.4">🔗</a></div></article><div class="para" id="sec-analytic-formulation-14">In our study of the shortest-distance problems in the last chapter the arcs to be considered were taken in the form <span class="process-math">\(y=y(x) (x_1 \leq x \leq x_2)\)</span> with <span class="process-math">\(y(x)\)</span> continuous on the interval <span class="process-math">\(x_1 \leq x \leq x_2\text{,}\)</span> and the interval could furthermore be subdivided into parts on each of which the derivative <span class="process-math">\(y'(x)\)</span> is continuous. An <em class="emphasis">admissible arc</em> for the brachistochrone problem will always be understood to have these properties besides the additional one that it lies entirely in the half-plane <span class="process-math">\(y\gt a\text{.}\)</span> For an admissible function, however, we retain always the definition given in <a href="sec-shortest-arc.html" class="internal" title="Section 2.1: The shortest arc joining two points">Section 2.1</a>. Our problem is then to find among the admissible arcs joining the points 1 and 2, one which minimizes the integral <span class="process-math">\(I\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-analytic-formulation-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section 3.2: The analytic formulation of the problem"><a href="#sec-analytic-formulation" title="Copy heading and permalink for Section 3.2: The analytic formulation of the problem" aria-label="Copy heading and permalink for Section 3.2: The analytic formulation of the problem">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec-brachistochrone-overview.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-first-necessary-3.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
