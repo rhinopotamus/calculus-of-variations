@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The notion of a field and a second sufficiency proof</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Calculus of Variations">
+<meta property="book:author" content="You">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.5';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.42217a82c75796c8.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.7e141ad8414abf4a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f4ab138da65f4203.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="calculus of variations" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="calculus-of-variations.html"><span class="title">Calculus of Variations</span> <span class="subtitle">An example to get you started</span></a></h1>
+<p class="byline">You</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-auxiliary-formulas.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="shortest.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-shortest-curve.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="typical.html" class="internal"><span class="codenumber">1</span> <span class="title">Typical Problems of the Calculus of Variations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-invention-of-calculus.html" class="internal"><span class="codenumber">1.1</span> <span class="title">The invention of the calculus</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-maxima-and-minima.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Maxima and minima</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-two-problems.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Two problems of the calculus of variations which may be simply formulated</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-problem-newton.html" class="internal"><span class="codenumber">1.4</span> <span class="title">The problem of Newton</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-brachistochrone.html" class="internal"><span class="codenumber">1.5</span> <span class="title">The brachistochrone problem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-more-general.html" class="internal"><span class="codenumber">1.6</span> <span class="title">A more general problem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-other-problems.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Other problems of the calculus of variations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="shortest.html" class="internal"><span class="codenumber">2</span> <span class="title">Shortest Distances</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-shortest-arc.html" class="internal"><span class="codenumber">2.1</span> <span class="title">The shortest arc joining two points</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-first-necessary.html" class="internal"><span class="codenumber">2.2</span> <span class="title">A first necessary condition</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-fundamental-lemma.html" class="internal"><span class="codenumber">2.3</span> <span class="title">A fundamental lemma</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-straight-line.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Proof that the straight line is shortest</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-auxiliary-formulas.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Two important auxiliary formulas</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-field.html" class="internal"><span class="codenumber">2.6</span> <span class="title">The notion of a field and a second sufficiency proof</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-shortest-curve.html" class="internal"><span class="codenumber">2.7</span> <span class="title">The shortest arc joining a point to a curve</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-shortest-ellipse.html" class="internal"><span class="codenumber">2.8</span> <span class="title">The shortest arc joining a point to an ellipse</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-two-curves.html" class="internal"><span class="codenumber">2.9</span> <span class="title">The shortest arc joining two curves</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="brachistochrone.html" class="internal"><span class="codenumber">3</span> <span class="title">The brachistochrone problem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-brachistochrone-overview.html" class="internal"><span class="codenumber">3.1</span> <span class="title">The brachistochrone problem: its significance as an illustration</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-analytic-formulation.html" class="internal"><span class="codenumber">3.2</span> <span class="title">The analytic formulation of the problem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-first-necessary-3.html" class="internal"><span class="codenumber">3.3</span> <span class="title">A first necessary condition</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-application-brachistochrone.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Application to the brachistochrone problem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cycloids.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Cycloids</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="surfaces.html" class="internal"><span class="codenumber">4</span> <span class="title">Surfaces of revolution of minimum area</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-preliminary-remarks.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Preliminary remarks concerning the problem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-proof-catenary.html" class="internal"><span class="codenumber">4.2</span> <span class="title">The proof that the minimizing arc is a catenary</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-family-catenaries.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The one-parameter family of catenaries through a point</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-field"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The notion of a field and a second sufficiency proof</span>
+</h2>
+<div class="para logical" id="sec-field-2">
+<div class="para">We have seen in <a href="sec-shortest-arc.html" class="internal" title="Section 2.1: The shortest arc joining two points">Section 2.1</a> that necessary conditions on the shortest arc may be deduced by comparing it with other admissible arcs of special types, but that a particular line can be proved to be actually the shortest only by comparing it with all of the admissible arcs joining the same two end-points. The sufficiency proof of this section is valid not only for the arcs which we have named admissible but also for arcs with equations in the parametric form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/sec-shortest-arc.html" id="eqn-11">
+\begin{equation}
+x=(t),\quad y=y(t) \quad (t_3 \leq t \leq t_5).\tag{2.6.1}
+\end{equation}
+</div>
+<div class="para">We suppose always that the functions <span class="process-math">\(x(t)\)</span> and <span class="process-math">\(y(t)\)</span> are continuous, and that the interval <span class="process-math">\([t_3, t_5]\)</span> can be subdivided into one or more parts on each of which <span class="process-math">\(x(t)\)</span> and <span class="process-math">\(y(t)\)</span> have continuous derivatives such that <span class="process-math">\((x')^2+(y')^2 \neq 0\text{.}\)</span> The curve represented is then continuous and has a continuously turning tangent except possibly at a finite number of corners. A much larger variety of curves can be represented by such parametric equations than by an equation of the form <span class="process-math">\(y=y(x)\)</span> because the parametric representation lays no restriction upon the slope of the curve or the number of points of the curve which may lie upon a single ordinate, while for an admissible arc <span class="process-math">\(y=y(x)\)</span> the slope must always be finite and the number of points on each ordinate at most one.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-field-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="remark remark-like" id="sec-field-3"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.6.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="sec-field-3-1">What’s going on here is we’re broadening our class of admissible arcs to include not just the graphs of <em class="emphasis">functions</em> of the form <span class="process-math">\(y=y(x)\text{,}\)</span> which must in particular pass the vertical line test, but also parametrically-defined curves. (You might know these as "space curves" or "<a class="external" href="https://activecalculus.org/multi/S-9-6-Vector-Valued-Functions.html" target="_blank">vector-valued functions</a>.") We’re still going to insist that they are piecewise smooth in the sense of <a href="sec-shortest-arc.html#activity-admissible" class="xref" data-knowl="./knowl/xref/activity-admissible.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.1.1: Admissible arcs, smoothness, and classes of functions">Activity 2.1.1</a> from earlier.<div class="autopermalink" data-description="Paragraph"><a href="#sec-field-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-field-3-2">The condition that <span class="process-math">\((x')^2+(y')^2 \neq 0\)</span> just says that the tangent vector is never zero. That is, if a point is traversing the curve according to the equations given, it never just <em class="emphasis">stops</em> along the way. This isn’t much of a concession; given any graph you’d want to draw, you can always find a way to parameterize it so that the point never has to stop.<div class="autopermalink" data-description="Paragraph"><a href="#sec-field-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 2.6.1"><a href="#sec-field-3" title="Copy heading and permalink for Remark 2.6.1" aria-label="Copy heading and permalink for Remark 2.6.1">🔗</a></div></article><div class="para" id="sec-field-4">The mathematician who first made satisfactory sufficiency proofs in the calculus of variations was <a class="external" href="https://en.wikipedia.org/wiki/Karl_Weierstrass" target="_blank">Weierstrass</a>, and the ingenious device which he used in his proofs is called a field. <details id="sec-field-4-2" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Aside</span></h3></summary><aside class="aside aside-like knowl__content"></aside></details> For the problems which we are considering in this chapter a field <span class="process-math">\(F\)</span> is a region of the <span class="process-math">\(xy\)</span>-plane with which there is associated a one-parameter family of straight-line segments all of which intersect a fixed curve <span class="process-math">\(D\text{,}\)</span> and which have the further property that through each point <span class="process-math">\((x, y)\)</span> of <span class="process-math">\(F\)</span> there passes one and but one of the segments. The curve <span class="process-math">\(D\)</span> may be either inside the field, or outside as illustrated in <a href="sec-auxiliary-formulas.html#fig-5" class="xref" data-knowl="./knowl/xref/fig-5.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.5.1">Figure 2.5.1</a>, and as a special case it may degenerate into a single fixed point.<div class="autopermalink" data-description="Paragraph"><a href="#sec-field-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="sec-field-5"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.6.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Explore this definition.</span>
+</h3>
+<div class="para logical" id="sec-field-5-2">
+<div class="para">Whenever you encounter a new definition in a math textbook, it’s a good idea to dig in and explore. Here are some questions that will be helpful in your exploration. Not every question applies to every situation, and there are certainly other questions you might consider asking.</div>
+<ol class="decimal" id="sec-field-5-2-1">
+<li id="sec-field-5-2-1-1">
+<div class="para" id="sec-field-5-2-1-1-1">What are the important parts of this definition?<div class="autopermalink" data-description="Paragraph"><a href="#sec-field-5-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec-field-5-2-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec-field-5-2-1-2">
+<div class="para" id="sec-field-5-2-1-2-1">Can you draw a picture or diagram to help you understand this definition?<div class="autopermalink" data-description="Paragraph"><a href="#sec-field-5-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec-field-5-2-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="sec-field-5-2-1-3">
+<div class="para" id="sec-field-5-2-1-3-1">What’s an example of something that satisfies this definition? What’s a non-example? (The next paragraph will be helpful, but try to think of other examples besides those given in the book.)<div class="autopermalink" data-description="Paragraph"><a href="#sec-field-5-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#sec-field-5-2-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="sec-field-5-2-1-4">
+<div class="para" id="sec-field-5-2-1-4-1">If you’re lucky enough to be reading a definition where some examples are immediately given, explore these examples. Draw pictures of the examples, and understand why they are examples. (Same deal for non-examples, if any.)<div class="autopermalink" data-description="Paragraph"><a href="#sec-field-5-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#sec-field-5-2-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-field-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 2.6.1: Explore this definition"><a href="#sec-field-5" title="Copy heading and permalink for Activity 2.6.1: Explore this definition" aria-label="Copy heading and permalink for Activity 2.6.1: Explore this definition">🔗</a></div></article><div class="para" id="sec-field-6">The whole plane is a field when covered by a system of parallel lines, the curve <span class="process-math">\(D\)</span> being in this case any straight line or curve which intersects all of the parallels. The plane with the exception of a single point 0 is a field when covered by the rays through 0, and 0 is a degenerate curve <span class="process-math">\(D\text{.}\)</span> The tangents to a circle do not cover a field since through each point outside of the circle there pass two tangents, and through a point inside the circle there is none. If, however, we cut off half of each tangent at its contact point with the circle, leaving only a one-parameter family of half-rays all pointing in the same direction around the circle, then the exterior of the circle is a field simply covered by the family of half-rays.<div class="autopermalink" data-description="Paragraph"><a href="#sec-field-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-field-7">At every point <span class="process-math">\((x, y)\)</span> of a field <span class="process-math">\(F\)</span> the straight line of the field has a slope <span class="process-math">\(p(x, y)\text{,}\)</span> the function so defined being called the slope-function of the field. The integral <span class="process-math">\(I^*\)</span> (from equation <a href="sec-auxiliary-formulas.html#eqn-i-star" class="xref" data-knowl="./knowl/xref/eqn-i-star.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.5.2">(2.5.2)</a>) with this slope-function in place of <span class="process-math">\(p\)</span> in its integrand has a definite value along every arc <span class="process-math">\(C_{35}\)</span> in the field having equations of the form <a href="sec-field.html#eqn-11" class="xref" data-knowl="./knowl/xref/eqn-11.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.6.1">(2.6.1)</a>, as we have seen on page 25. We can prove with the help of the formulas of the last section that the integral <span class="process-math">\(I^*\)</span> associated in this way with a field has the two following useful properties: <article class="theorem theorem-like" id="thm-i-star-field"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.6.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="thm-i-star-field-1-1">
+<ul class="disc" id="thm-i-star-field-1-1-1">
+<li id="thm-i-star-field-1-1-1-1">
+<div class="para" id="thm-i-star-field-1-1-1-1-1">The values of <span class="process-math">\(I^*\)</span> are the same along all curves <span class="process-math">\(C_{35}\)</span> in the field F having the same end-points 3 and 5.<div class="autopermalink" data-description="Paragraph"><a href="#thm-i-star-field-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#thm-i-star-field-1-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="thm-i-star-field-1-1-1-2">
+<div class="para" id="thm-i-star-field-1-1-1-2-1">Furthermore along each segment of one of the straight lines of the field the value of <span class="process-math">\(I^*\)</span> is equal to the length of the segment.<div class="autopermalink" data-description="Paragraph"><a href="#thm-i-star-field-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#thm-i-star-field-1-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-i-star-field-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.6.2"><a href="#thm-i-star-field" title="Copy heading and permalink for Theorem 2.6.2" aria-label="Copy heading and permalink for Theorem 2.6.2">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#sec-field-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-field-8">
+<div class="para">To prove the first of these statements we may consider the curve <span class="process-math">\(C_{35}\)</span> shown in the field of <span class="process-math">\(F\)</span> of <a href="sec-auxiliary-formulas.html#fig-5" class="xref" data-knowl="./knowl/xref/fig-5.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.5.1">Figure 2.5.1</a>. Through every point <span class="process-math">\((x, y)\)</span> of this curve there passes, by hypothesis, a straight line of the field <span class="process-math">\(F\)</span> intersecting <span class="process-math">\(D\text{,}\)</span> and the formula <a href="sec-auxiliary-formulas.html#eqn-8" class="xref" data-knowl="./knowl/xref/eqn-8.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.5.3">(2.5.3)</a>, applied to the one-parameter family of straight-line segments so determined by the points of <span class="process-math">\(C_{35}\text{,}\)</span> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-5.html ./knowl/xref/eqn-8.html" id="sec-field-8-9">
+\begin{equation*}
+I^{*}\left(C_{35}\right)=I^{*}\left(D_{46}\right)-I\left(E_{56}\right)+I\left(E_{34}\right).
+\end{equation*}
+</div>
+<div class="para">The values of the terms on the right are completely determined when the points 3 and 5 in the field are given, and are entirely independent of the form of the curve <span class="process-math">\(C_{35}\)</span> joining these two points. This shows that the value <span class="process-math">\(I^*(C_{35})\)</span> is the same for all arcs <span class="process-math">\(C_{35}\)</span> in the field joining the same two end-points, as stated in the theorem.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-field-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-field-9">The second property of the theorem follows from the fact that along a straight-line segment of the field the differentials <span class="process-math">\(dx\)</span> and <span class="process-math">\(dy\)</span> satisfy the equation <span class="process-math">\(dy=p\,dx\text{,}\)</span> and the integrand of <span class="process-math">\(I^*\)</span> reduces therefore to <span class="process-math">\(\sqrt{1+p^2}\,dx\)</span> which is the integrand of the length integral.<div class="autopermalink" data-description="Paragraph"><a href="#sec-field-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-field-10">
+<div class="para">We now have the mechanism necessary for the sufficiency proof which was the objective of this section. We wish to show that a straight-line segment <span class="process-math">\(E_{12}\)</span> joining a pair of points 1 and 2 is shorter than every other arc joining these points. For that purpose let us consider the field formed by covering the whole <span class="process-math">\(xy\)</span>-plane by the lines parallel to <span class="process-math">\(E_{12}\text{.}\)</span> When <span class="process-math">\(C_{12}\)</span> is an arc joining 1 with 2 in this field and defined by equations in the parametric form <a href="sec-field.html#eqn-11" class="xref" data-knowl="./knowl/xref/eqn-11.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.6.1">(2.6.1)</a> the properties just deduced for the integral <span class="process-math">\(I*\)</span> give</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-11.html" id="sec-field-10-7">
+\begin{equation*}
+I\left(E_{12}\right)=I^{*}\left(E_{12}\right)=I^{*}\left(C_{12}\right)=\int_{s_{1}}^{s_2} \cos \theta\, ds,
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-field-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="activity project-like" id="sec-field-11"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.6.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="autopermalink" data-description="Activity 2.6.2"><a href="#sec-field-11" title="Copy heading and permalink for Activity 2.6.2" aria-label="Copy heading and permalink for Activity 2.6.2">🔗</a></div></article><div class="para logical" id="sec-field-12">
+<div class="para">and the difference between the values of <span class="process-math">\(I\)</span> along <span class="process-math">\(C_{12}\)</span> and <span class="process-math">\(E_{12}\)</span> is therefore</div>
+<div class="displaymath process-math" id="sec-field-12-4">
+\begin{equation*}
+I\left(C_{12}\right)-I\left(E_{12}\right)=\int_{s_{1}}^{s_{2}}(1-\cos \theta) \, ds \geq 0.
+\end{equation*}
+</div>
+<div class="para">The equality sign can hold only if <span class="process-math">\(C_{12}\)</span> coincides with <span class="process-math">\(E_{12}\text{.}\)</span> For when the integral in the last equation is zero we must have <span class="process-math">\(\cos\theta = 1\)</span> at every point of <span class="process-math">\(C_{12}\text{,}\)</span> from which it follows that <span class="process-math">\(C_{12}\)</span> is tangent at every point to a straight line of the field and satisfies the equation <span class="process-math">\(dy = p\, dx\text{.}\)</span> Such a differential equation can have but one solution through the initial point 1 and that solution is <span class="process-math">\(E_{12}\text{.}\)</span> We have proved therefore that the length <span class="process-math">\(I(C_{12})\)</span> of <span class="process-math">\(C_{12}\)</span> is always greater than that of <span class="process-math">\(E_{12}\)</span> unless <span class="process-math">\(C_{12}\)</span> is coincident with <span class="process-math">\(E_{12}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-field-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-field-13">We may emphasize again here that the sufficiency proof just given is considerably more inclusive than that of <a href="sec-straight-line.html" class="internal" title="Section 2.4: Proof that the straight line is shortest">Section 2.4</a>, since it clearly shows that a straight line joining the points 1 and 2 is not only shorter than all other admissible arcs <span class="process-math">\(y=y(x)\)</span> joining these points but also shorter than every other curve with the same end-points defined by equations in the parametric form <a href="sec-field.html#eqn-11" class="xref" data-knowl="./knowl/xref/eqn-11.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.6.1">(2.6.1)</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-field-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section 2.6: The notion of a field and a second sufficiency proof"><a href="#sec-field" title="Copy heading and permalink for Section 2.6: The notion of a field and a second sufficiency proof" aria-label="Copy heading and permalink for Section 2.6: The notion of a field and a second sufficiency proof">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec-auxiliary-formulas.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-shortest-curve.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

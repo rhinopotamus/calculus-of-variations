@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="activity project-like"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical">
+<div class="para">Where on earth did that integral come from? Let’s figure it out, because it’s a good example of the <dfn class="terminology">slice-approximate-integrate paradigm</dfn> that guides a lot of the integrals we’ll be writing down in this course, and this integral in particular is one that will come up a lot for us.</div>
+<ol class="decimal" id="activity-arclength-1-2">
+<li>
+<div class="para">Draw yourself a reasonably wiggly function <span class="process-math">\(y=y(x)\)</span> whose length you’d like to calculate. Label the beginning point <span class="process-math">\((x_1, y(x_1))\text{,}\)</span> and label the ending point <span class="process-math">\((x_2, y(x_2))\text{.}\)</span> Draw a few other points on the function at regularly-spaced intervals.<div class="autopermalink" data-description="Paragraph"><a href="#activity-arclength-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#activity-arclength-1-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li>
+<div class="para">It’s easy to calculate the length of a straight line, so let’s <em class="emphasis">slice</em> the wiggly function into a bunch of pieces and <em class="emphasis">approximate</em> each piece by a straight line. Connect the points you drew in step 1 with straight line segments, and convince yourself that the line segments are a reasonably good wrong answer to the length of the corresponding wiggly piece.<div class="autopermalink" data-description="Paragraph"><a href="#activity-arclength-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#activity-arclength-1-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li>
+<div class="para">Draw a zoomed-in picture of just one line segment. Pretend that this is the hypotenuse of a right triangle with horizontal and vertical legs. Label each leg as either <span class="process-math">\(\Delta x\)</span> or <span class="process-math">\(\Delta y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#activity-arclength-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#activity-arclength-1-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li>
+<div class="para">Use the Pythagorean theorem to calculate the length of the line segment, which we’ll call <span class="process-math">\(L_{\textrm{slice}}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#activity-arclength-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#activity-arclength-1-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li>
+<div class="para">So that our expression can be the summand in a Riemann sum, we’d really like it to be of the form (stuff)<span class="process-math">\(\cdot\Delta x\text{.}\)</span> It’s not in that form yet, so to get closer, multiply <span class="process-math">\(L_{\textrm{slice}}\)</span> by <span class="process-math">\(\frac{\Delta x}{\Delta x}\text{.}\)</span> This is legit because it doesn’t change the value of <span class="process-math">\(L_{\textrm{slice}}.\)</span> Explain why not.<div class="autopermalink" data-description="Paragraph"><a href="#activity-arclength-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\frac{\Delta x}{\Delta x}\)</span> is just a <span class="process-math">\(1\)</span> with a cheap disguise on, and multiplying by <span class="process-math">\(1\)</span> doesn’t change anything at all. Multiplying by a fancy <span class="process-math">\(1\)</span> (as well as adding a fancy <span class="process-math">\(0\)</span>) is a favorite trick of mathematicians. <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/disguised-1.png" class="contained" alt="A 1 with a cheap disguise on."></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#activity-arclength-1-2-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.1"><a href="#activity-arclength-1-2-5-2" title="Copy heading and permalink for Solution 5.1" aria-label="Copy heading and permalink for Solution 5.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item 5"><a href="#activity-arclength-1-2-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li>
+<div class="para">Factor the <span class="process-math">\(\Delta x\)</span> in the denominator into the square root, distribute, and simplify. What happens as <span class="process-math">\(n\to\infty\text{,}\)</span> or, in other words, as <span class="process-math">\(\Delta x \to 0?\)</span><div class="autopermalink" data-description="Paragraph"><a href="#activity-arclength-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+L_{\textrm{slice}} = \sqrt{1+\left(\frac{\Delta y}{\Delta x}\right)^2} \Delta x.
+\end{equation*}
+</div>
+<div class="para">In the limit, <span class="process-math">\(\frac{\Delta y}{\Delta x}\)</span> becomes <span class="process-math">\(y'(x)\text{,}\)</span> so this is equivalent to <span class="process-math">\(\sqrt{1+\left(y'(x)\right)^2} \Delta x\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#activity-arclength-1-2-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.1"><a href="#activity-arclength-1-2-6-2" title="Copy heading and permalink for Solution 6.1" aria-label="Copy heading and permalink for Solution 6.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item 6"><a href="#activity-arclength-1-2-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+<li>
+<div class="para">We’ve sliced, we’ve approximated, and now it’s time to <em class="emphasis">integrate</em>. We’ve written down an expression for the length of one slice. Take the Riemann sum of all these slices and let <span class="process-math">\(n\to\infty\)</span> to obtain an expression for the actual arc length of the wiggly function. <em class="emphasis">Be sure to involve <span class="process-math">\(x_1\)</span> and <span class="process-math">\(x_2\text{!}\)</span></em><div class="autopermalink" data-description="Paragraph"><a href="#activity-arclength-1-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="displaymath process-math">
+\begin{equation*}
+I = \int_{x_1}^{x_2} \sqrt{1+\left(y'(x)\right)^2}\,dx.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Solution 7.1"><a href="#activity-arclength-1-2-7-2" title="Copy heading and permalink for Solution 7.1" aria-label="Copy heading and permalink for Solution 7.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item 7"><a href="#activity-arclength-1-2-7" title="Copy heading and permalink for Item 7" aria-label="Copy heading and permalink for Item 7">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#activity-arclength-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 1.3.1"><a href="#activity-arclength" title="Copy heading and permalink for Activity 1.3.1" aria-label="Copy heading and permalink for Activity 1.3.1">🔗</a></div></article><span class="incontext"><a class="internal" href="sec-two-problems.html#activity-arclength">in-context</a></span>
+</body>
+</html>
