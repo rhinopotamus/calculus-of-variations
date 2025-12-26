@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="activity project-like"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical">
+<div class="para">This next result is a doozy, and it uses an important technique with which you’re probably not especially familiar: <dfn class="terminology">differentiation under the integral sign</dfn> <details class="ptx-footnote" aria-live="polite" id="act-diff-under-int-1-2"><summary class="ptx-footnote__number" title="Footnote 2.2.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="act-diff-under-int-1-2">For more on this, see <a class="external" href="https://kconrad.math.uconn.edu/blurbs/analysis/diffunderint.pdf" target="_blank">this interesting article</a> and its references.</div></details>. Here’s a little activity to walk you through what’s going on here.</div>
+<ol class="decimal" id="act-diff-under-int-1-3">
+<li>
+<div class="para">Convince yourself that <span class="process-math">\(I(a)\)</span> as given in <a href="sec-first-necessary.html#eqn-iofa" class="xref" data-knowl="./knowl/xref/eqn-iofa.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.2">(2.2.2)</a> is indeed a function of <span class="process-math">\(a\text{,}\)</span> and thus it’s reasonable for us to compute <span class="process-math">\(\frac{dI}{da}\text{.}\)</span> Also, convince yourself that <span class="process-math">\(y'+a\eta'\)</span> is a function of both <span class="process-math">\(x\)</span> and <span class="process-math">\(a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#act-diff-under-int-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#act-diff-under-int-1-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li>
+<div class="para logical">
+<div class="para">Here’s where "differentiation under the integral sign" comes in: according to something called Leibniz’s rule, as long as our functions are "nice enough" (which they are),</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-iofa.html">
+\begin{equation*}
+\frac{d}{da} \int_{x_1}^{x_2} F(x, a)\, dx = \int_{x_1}^{x_2} \frac{\partial}{\partial a} F(x,a)\, dx.
+\end{equation*}
+</div>
+<div class="para">Apply Leibniz’s rule to write down an expression for <span class="process-math">\(\frac{dI}{da}\)</span> in <a href="sec-first-necessary.html#eqn-iofa" class="xref" data-knowl="./knowl/xref/eqn-iofa.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.2">(2.2.2)</a>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#act-diff-under-int-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{d}{da} \int_{x_1}^{x_2} f(y'+a\eta')\, dx = \int_{x_1}^{x_2} \frac{\partial}{\partial a} f(y'+a\eta')\, dx.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Solution 2.1"><a href="#act-diff-under-int-1-3-2-2" title="Copy heading and permalink for Solution 2.1" aria-label="Copy heading and permalink for Solution 2.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item 2"><a href="#act-diff-under-int-1-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li>
+<div class="para logical">
+<div class="para">We’re going to need the chain rule to deal with the integrand on the RHS. In particular, it’ll be helpful for us to think about the chain rule in Leibniz notation (he’s just popping up all over today!):</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\partial f}{\partial a} = \frac{\partial f}{\partial u} \cdot \frac{\partial u}{\partial a}.
+\end{equation*}
+</div>
+<div class="para">Explain why this version of the chain rule is equivalent to the usual understanding: "first take the derivative of the outside stuff, leaving the inside stuff alone, then multiply by the derivative of the inside stuff."</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#act-diff-under-int-1-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#act-diff-under-int-1-3-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li>
+<div class="para">What’s something good you can label as <span class="process-math">\(u\)</span> in your expression for <span class="process-math">\(\frac{dI}{da}\text{?}\)</span> What’s <span class="process-math">\(\frac{\partial u}{\partial a}\text{,}\)</span> and so what’s <span class="process-math">\(\frac{\partial f}{\partial a}\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#act-diff-under-int-1-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">
+<span class="process-math">\(u\)</span> should be the inside stuff, <span class="process-math">\(u=y'+a\eta'\text{.}\)</span> Therefore,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\partial u}{\partial a} = \eta' \textrm{,  so  } \frac{\partial f}{\partial a} = \frac{\partial f}{\partial u}\cdot \eta'.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#act-diff-under-int-1-3-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.1"><a href="#act-diff-under-int-1-3-4-2" title="Copy heading and permalink for Solution 4.1" aria-label="Copy heading and permalink for Solution 4.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item 4"><a href="#act-diff-under-int-1-3-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li>
+<div class="para">We mostly care about <span class="process-math">\(I(a)\)</span> and <span class="process-math">\(I'(a)\)</span> when <span class="process-math">\(a=0\)</span> -- that is, when there’s zero variation on the original curve <span class="process-math">\(y(x)\text{.}\)</span> If <span class="process-math">\(a=0\text{,}\)</span> then what’s <span class="process-math">\(u\text{?}\)</span> Use this to rewrite your integrand <span class="process-math">\(\frac{\partial f}{\partial a}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#act-diff-under-int-1-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">If <span class="process-math">\(a=0\text{,}\)</span> then <span class="process-math">\(u = y'+0\cdot\eta' = y'\text{.}\)</span> Therefore, we can rewrite our integrand to remove the convenience variable <span class="process-math">\(u\)</span> that we kinda don’t care about anyway:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\partial f}{\partial a} = \frac{\partial f}{\partial u}\cdot \eta' = \frac{\partial f}{\partial y'}\cdot \eta'.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#act-diff-under-int-1-3-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.1"><a href="#act-diff-under-int-1-3-5-2" title="Copy heading and permalink for Solution 5.1" aria-label="Copy heading and permalink for Solution 5.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item 5"><a href="#act-diff-under-int-1-3-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li>
+<div class="para">Conclude by writing down a final expression for <span class="process-math">\(I'(0)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#act-diff-under-int-1-3-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="displaymath process-math">
+\begin{equation*}
+I'(0) = \int_{x_1}^{x_2} \frac{\partial}{\partial y'}f(y') \cdot \eta'\, dx.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Solution 6.1"><a href="#act-diff-under-int-1-3-6-2" title="Copy heading and permalink for Solution 6.1" aria-label="Copy heading and permalink for Solution 6.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item 6"><a href="#act-diff-under-int-1-3-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#act-diff-under-int-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 2.2.1"><a href="#act-diff-under-int" title="Copy heading and permalink for Activity 2.2.1" aria-label="Copy heading and permalink for Activity 2.2.1">🔗</a></div></article><span class="incontext"><a class="internal" href="sec-first-necessary.html#act-diff-under-int">in-context</a></span>
+</body>
+</html>
